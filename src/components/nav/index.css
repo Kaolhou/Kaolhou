@@ -1,0 +1,7 @@
+nav.navbar{
+    background-color: aqua;
+}
+nav.navbar > ul.navbaritem{
+    margin: 0;
+    
+}
