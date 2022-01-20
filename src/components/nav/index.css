@@ -1,5 +1,5 @@
 nav.navbar{
-    background-color: rgb(0, 157, 219);
+    background-color: var(--color-pallete2);
     height: 54px;
 }
 nav.navbar > ul.navbaritem{

@@ -1,0 +1,42 @@
+.proj-conteiner{
+    margin: 20px auto;
+    max-width: 700px;
+}
+.proj-conteiner > .myImg{
+    margin: auto;
+    padding: 20px;
+    max-width: 325px;
+}
+.proj-conteiner > .myImg > img.img{
+    border-radius: 40px;
+    padding: 0;
+    width: 100%;
+}
+
+.proj-conteiner .mid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.proj-conteiner .mid p#name {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+.proj-conteiner .mid p#login {
+
+}
+
+
+
+.loading{
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#000;
+}
