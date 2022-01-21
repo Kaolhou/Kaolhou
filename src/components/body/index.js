@@ -8,6 +8,7 @@ import js from '../../media/javascript-original.svg'
 import node from '../../media/nodejs-original.svg'
 import pgsql from '../../media/postgresql-original.svg'
 import sequelize from '../../media/sequelize-original.svg'
+import ts from '../../media/typescript-original.svg'
 
 
 
@@ -68,6 +69,11 @@ function Main(){
                         url={js}
                         lang="JavaScript"
                         level="Intermediário"
+                    />
+                    <LangItem
+                        url={ts}
+                        lang="TypeScript"
+                        level="Estudando"
                     />
                     <LangItem
                         url={node}
