@@ -42,7 +42,7 @@ function Projects(){
             <div className='repos-container'>
                 {repo.map((item,key)=>{
                     return(
-                        <a href={item.html_url} key={key} className='repos-item'>
+                        <a href={item.html_url} key={key} className='repos-item' target="_blank" rel="noreferrer">
                             <div className='repos-name'>{item.name}</div>
                             <div className='repos-lang'>{item.language}</div>
                         </a>
