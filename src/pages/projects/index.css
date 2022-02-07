@@ -14,17 +14,22 @@
 }
 
 .proj-conteiner .mid{
+    margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .proj-conteiner .mid p#name {
     font-weight: bold;
     font-size: 20px;
     margin: 0;
 }
-.proj-conteiner .mid p#login {
-
+.proj-conteiner .mid .feat{
+    text-align: right;
 }
+/*.proj-conteiner .mid p#login {
+
+}*/
 
 
 
@@ -39,4 +44,30 @@
     justify-content: center;
     align-items: center;
     background-color:#000;
+}
+
+.repos-container{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.repos-container .repos-item{
+    width: 300px;
+    padding: 10px;
+    background-color: var(--color-pallete2);
+    margin:5px;
+    border-radius: 10px;
+    color: var(--color-pallete5);
+}
+.repos-container .repos-item:hover{
+    filter: brightness(80%);
+    transition: .3s;
+}
+
+.repos-container .repos-item .repos-name{
+    font-size: 25px;
+}
+.repos-container .repos-item .repos-lang{
+    font-size: 15px;
 }

@@ -25,6 +25,7 @@ body{
     transition: .5s;
     text-transform: uppercase;
     font-weight: bold;
+    color: var(--color-pallete5);
 }
  a{
     color: #000;
