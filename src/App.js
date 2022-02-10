@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/nav/index'
 import Routes from './routes'
+import Footer from './components/footer';
 import { BrowserRouter as Router, Link} from 'react-router-dom';
 
 function Item(props){
@@ -24,6 +25,7 @@ function App() {
         </NavBar>
         <Routes />
       </Router>
+      <Footer />
     </div>
   );
 }

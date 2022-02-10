@@ -9,7 +9,7 @@ import node from '../../media/nodejs-original.svg'
 import pgsql from '../../media/postgresql-original.svg'
 import sequelize from '../../media/sequelize-original.svg'
 import ts from '../../media/typescript-original.svg'
-import {Langs, LangItem} from '../../components/body/index'
+import {ItemConteiner, BoxContainer} from '../../components/cards/index'
 
 
 function Main(){
@@ -32,53 +32,53 @@ function Main(){
             </div>
             <div className='languages'>
                 <h1 className="h1this">Conhecimentos</h1>
-                <Langs>
-                    <LangItem
+                <BoxContainer>
+                    <ItemConteiner
                         url={css}
-                        lang="CSS3"
-                        level="Intermediário"
+                        title="CSS3"
+                        content="Intermediário"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={html}
-                        lang="HTML5"
-                        level="Avançado"
+                        title="HTML5"
+                        content="Avançado"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={js}
-                        lang="JavaScript"
-                        level="Intermediário"
+                        title="JavaScript"
+                        content="Intermediário"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={ts}
-                        lang="TypeScript"
-                        level="Estudando"
+                        title="TypeScript"
+                        content="Estudando"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={node}
-                        lang="Node.js"
-                        level="Intermediário"
+                        title="Node.js"
+                        content="Intermediário"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={pgsql}
-                        lang="PostgreSQL"
-                        level="Básico"
+                        title="PostgreSQL"
+                        content="Básico"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={sequelize}
-                        lang="Sequelize"
-                        level="Intermediário"
+                        title="Sequelize"
+                        content="Intermediário"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={express}
-                        lang="Express.js"
-                        level="Intermediário"
+                        title="Express.js"
+                        content="Intermediário"
                     />
-                    <LangItem
+                    <ItemConteiner
                         url={react}
-                        lang="React.js"
-                        level="Intermediário"
+                        title="React.js"
+                        content="Intermediário"
                     />
-                </Langs>
+                </BoxContainer>
             </div>
         </div>
     )

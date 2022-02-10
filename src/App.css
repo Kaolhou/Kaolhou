@@ -15,7 +15,21 @@ body{
     overflow-x: hidden;
     background-color: var(--color-pallete3);
     color: var(--color-pallete5);
-}   
+} 
+::selection{
+    background-color: var(--color-pallete4);
+    color: var(--color-pallete5);
+}  
+
+.App{
+    overflow-x: hidden;
+}
+#root{
+    overflow-x: hidden;
+}
+.navbar{
+    overflow-x: hidden;
+}
 
 .nav-item{
     list-style: none;
@@ -26,6 +40,8 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     color: var(--color-pallete5);
+    user-select: none;
+    -webkit-user-select: none;
 }
  a{
     color: #000;

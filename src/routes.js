@@ -13,7 +13,7 @@ function MainRoutes(){
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path='*' element={<h1>Error 404</h1>} />
+            <Route path='*' element={<div><h1>Error 404</h1><p>page not found</p></div>} />
         </Routes>
     )
 }

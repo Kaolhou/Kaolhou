@@ -14,6 +14,7 @@
 }
 
 .proj-conteiner .mid{
+    padding: 7px;
     margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
@@ -27,9 +28,11 @@
 .proj-conteiner .mid .feat{
     text-align: right;
 }
-/*.proj-conteiner .mid p#login {
-
-}*/
+.proj-conteiner .mid p#login {
+    margin: 3px 0px 25px 0;
+    /*filter: brightness(200%);*/
+    color:#8599AD;
+}
 
 
 
@@ -70,4 +73,9 @@
 }
 .repos-container .repos-item .repos-lang{
     font-size: 15px;
+}
+@media screen and (max-width:468px) {
+    .proj-conteiner .mid .feat{
+        text-align: left;
+    }
 }
