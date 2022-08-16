@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base{
+  @font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Regular.ttf');
+  }
+}
+
+
+*{
+  @apply font-roboto
+}
+h1{
+  @apply text-5xl px-3 py-5
+}
+textarea{
+  @apply border border-black border-x-2  border-y-2 rounded-md resize-y w-3/4 bg-pallete-3 !important
+}
+:root{
+  @apply bg-pallete-5 text-pallete-2 selection:bg-pallete-1
+}
