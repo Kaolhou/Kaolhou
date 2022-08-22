@@ -24,7 +24,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div>
     <Head>
         <meta name="twitter:title" content="A Curriculum Website by André Mendes da Rocha"/>
-        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@kaolhou" />
         <meta name="twitter:image" content="favicon.svg"/>
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
         <title>Kaolhou</title>

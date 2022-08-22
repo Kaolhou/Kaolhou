@@ -95,7 +95,8 @@ export default function PostId(props:InferGetStaticPropsType<typeof getStaticPro
                     <Head>
                         <title>{data?.posts?.title || "project title not found"}</title>
                         <meta name="twitter:title" content={data.posts.title}/>
-                        <meta name="twitter:card" content="summary"/>
+                        <meta name="twitter:card" content="summary" />
+                        <meta name="twitter:creator" content="@kaolhou" />
                         <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
 
                     </Head>
