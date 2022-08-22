@@ -69,7 +69,7 @@ export default function PostId(props:InferGetStaticPropsType<typeof getStaticPro
 
     if(!loading){
         if(data?.posts.title){
-            console.log(data?.posts.title)
+            // console.log(data?.posts.title)
             let parseDate = new Date(data.posts.updatedAt)
             let day = isLessThan10(parseDate.getDate())
             let month = isLessThan10(parseDate.getMonth())
