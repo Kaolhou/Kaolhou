@@ -1,26 +1,110 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base{
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
   }
-  body {
-    color: white;
-    background: black;
+}
+*{
+  font-family: 'Roboto';
+}
+:root{
+  @apply bg-pallete-5 text-pallete-2 selection:bg-pallete-1
+}
+.home-conteiner, #about-container{
+  @apply px-0 sm:px-10 lg:px-32 mx-3
+}
+h1{
+  @apply text-4xl py-3 font-ubuntu
+}
+a.und{
+  @apply underline underline-offset-2 hover:opacity-75 transition-opacity
+}
+@media screen and (max-width: 1215px) {
+  .content{
+      @apply justify-center;
   }
+}
+
+/*markdown configuration*/
+.markdown{
+  @apply m-auto w-[100%] sm:w-[calc(100%-15rem)] md:w-[calc(100%-30rem)] lg:w-[calc(100%-45rem)]
+  px-2 bg-pallete-3 rounded-md p-5
+}
+.markdown h1{
+  font-size: 3rem !important;
+  @apply px-2 py-2 font-bold
+}
+.markdown h2{
+  font-size: 2rem !important;
+  @apply px-3 py-2 font-semibold
+}
+.markdown h3{
+  font-size: 1.5rem !important;
+  @apply px-3 py-2 font-semibold
+}
+.markdown h4{
+  font-size: 1rem !important;
+  @apply px-3 py-2 font-semibold
+}
+.contains-task-list{
+  flex-direction: column;
+}
+.task-list-item{
+  list-style-type: none !important;
+  padding-inline-start: 0 !important;
+}
+
+.markdown blockquote{
+  @apply text-zinc-900 bg-pallete-2 pl-3 border-l-8 border-zinc-800 my-3 rounded-md p-2;
+  color: #252525;
+}
+.markdown a{
+  @apply decoration-slice underline underline-offset-2 hover:text-pallete-1 transition-colors
+}
+/* .markdown blockquote>p::marker{
+  content: '';
+} */
+.markdown pre{
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 10px 0;
+  overflow-x: auto;
+}
+
+.markdown li{
+  list-style: none !important;
+}
+.markdown ul{
+  list-style-position: inside;
+}
+.markdown ul > li::before{
+  content: '🞄 ';
+}
+.markdown p code{
+  @apply bg-pallete-4 px-[.35rem] py-1 rounded-md;
+  display: inline;
+}
+
+.markdown ol{
+  counter-reset: li;
+  padding: .75rem 0;
+}
+.markdown ol li{
+  list-style: none;
+}
+.markdown ol > li::before{
+  counter-increment: li;
+  content: counter(li)"-) ";
+}
+.markdown img{
+  @apply min-w-[15rem] max-w-sm m-auto
+}
+.markdown p{
+  @apply py-2
 }
