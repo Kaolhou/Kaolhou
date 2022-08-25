@@ -6,6 +6,7 @@ import client from "../../lib/apollo";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext, InferGetStaticPropsType } from "next";
 import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
+import { Header } from "../../components/Header";
 
 export interface GetPostQueryResponse{
     posts: {
@@ -92,14 +93,8 @@ export default function PostId(props:InferGetStaticPropsType<typeof getStaticPro
                 loading? 'loading': 
                 data?
                 <>
-                    <Head>
-                        <title>{data?.posts?.title || "project title not found"}</title>
-                        <meta name="twitter:title" content={data.posts.title}/>
-                        <meta name="twitter:card" content="summary" />
-                        <meta name="twitter:creator" content="@kaolhou" />
-                        <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+                    <Header title={data.posts.title} secondT="page not found" />
 
-                    </Head>
                     <div className="py-6 flex-col flex justify-center">
                         <h1 className="flex justify-center">{data.posts.title}</h1>
                         <span className="flex justify-center">Editado: {strDate}</span>

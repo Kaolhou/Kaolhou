@@ -8,6 +8,7 @@ import { Footer } from '../components/Footer';
 import { ApolloProvider } from '@apollo/client';
 import lib from '../lib/apollo'
 import Head from 'next/head';
+import { Header } from '../components/Header';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -22,14 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       
     <div>
-    <Head>
-        <meta name="twitter:title" content="A Curriculum Website by André Mendes da Rocha"/>
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="@kaolhou" />
-        <meta name="twitter:image" content="favicon.svg"/>
-        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-        <title>Kaolhou</title>
-    </Head>
+      <Header/>
       <ApolloProvider client={lib}>
         <NavBar>
           <Item icon="Home" path="/"/>
