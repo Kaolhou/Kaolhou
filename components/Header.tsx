@@ -17,6 +17,7 @@ export function Header({title,secondT}:headerProps){
             <meta name="twitter:creator" content="@kaolhou" />
             <meta name="twitter:image" content="https://kaolhou-dev.vercel.app/favicon.svg"/>
             <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+            <link rel="apple-touch-icon" href="https://kaolhou-dev.vercel.app/favicon.svg">
             <title>{title||secondT||'Kaolhou'}</title>
 
         </Head>
