@@ -7,8 +7,8 @@
    viewBox="0 0 47.625 47.625"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   sodipodi:docname="desenho.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="favicon.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,13 +25,15 @@
      showgrid="false"
      inkscape:zoom="2"
      inkscape:cx="33.5"
-     inkscape:cy="104.25"
+     inkscape:cy="104"
      inkscape:window-width="1366"
      inkscape:window-height="715"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#505050" />
   <defs
      id="defs2" />
   <g
@@ -46,7 +48,7 @@
        x="-47.624996"
        y="-47.624996"
        transform="scale(-1)"
-       ry="6.4822917" />
+       ry="0" />
     <g
        id="g2122"
        transform="matrix(1.3192569,0,0,1.3192569,-9.887689,-4.7966607)">
