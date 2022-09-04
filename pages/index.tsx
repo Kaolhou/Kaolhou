@@ -168,7 +168,7 @@ const Home: NextPage<GetSPPostQueryResponse> = (props:InferGetStaticPropsType<ty
                     <ItemConteiner
                         url={tailwind}
                         title="Tailwind"
-                        content="Estudando"
+                        content="Intermediário"
                         link="https://tailwindcss.com/docs/installation"
                         used
                     />
