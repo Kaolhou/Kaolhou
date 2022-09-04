@@ -12,6 +12,9 @@ import csharp from '../media/csharp-original.svg'
 import java from '../media/java-original.svg'
 import python from '../media/python-original.svg'
 import tailwind from '../media/tailwindcss-plain.svg'
+import prisma from '../media/prisma-icon.ico'
+import graphql from '../media/graphql-plain.svg'
+import next from '../media/nextjs-original.svg'
 import { ApolloError, gql } from '@apollo/client'
 import { BoxContainer, ItemConteiner } from '../components/Cards'
 import { Content } from '../components/Content'
@@ -96,12 +99,14 @@ const Home: NextPage<GetSPPostQueryResponse> = (props:InferGetStaticPropsType<ty
                         title="CSS3"
                         content="Avançado"
                         link="https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+                        used
                     />
                     <ItemConteiner
                         url={html}
                         title="HTML5"
                         content="Avançado"
                         link="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+                        used
                     />
                     <ItemConteiner
                         url={js}
@@ -114,12 +119,14 @@ const Home: NextPage<GetSPPostQueryResponse> = (props:InferGetStaticPropsType<ty
                         title="TypeScript"
                         content="Intermediário"
                         link="https://www.typescriptlang.org/docs/"
+                        used
                     />
                     <ItemConteiner
                         url={node}
                         title="Node.js"
                         content="Intermediário"
                         link="https://nodejs.org/pt-br/docs/"
+                        used
                     />
                     <ItemConteiner
                         url={pgsql}
@@ -144,6 +151,7 @@ const Home: NextPage<GetSPPostQueryResponse> = (props:InferGetStaticPropsType<ty
                         title="React.js"
                         content="Intermediário"
                         link="https://reactjs.org/docs/getting-started.html"
+                        used
                     />
                     <ItemConteiner
                         url={java}
@@ -162,12 +170,34 @@ const Home: NextPage<GetSPPostQueryResponse> = (props:InferGetStaticPropsType<ty
                         title="Tailwind"
                         content="Estudando"
                         link="https://tailwindcss.com/docs/installation"
+                        used
                     />
                     <ItemConteiner
                         url={csharp}
                         title="C#"
                         content="Interessado"
                         link="https://docs.microsoft.com/pt-br/dotnet/csharp/"
+                    />
+                    <ItemConteiner 
+                        url={prisma}
+                        title='Prisma'
+                        content='Intermediário'
+                        link='https://www.prisma.io/docs/'
+                        used
+                    />
+                    <ItemConteiner 
+                        url={next}
+                        title='NextJs'
+                        content='Básico'
+                        link='https://nextjs.org/docs/getting-started'
+                        used
+                    />
+                    <ItemConteiner 
+                        url={graphql}
+                        title='GraphQL'
+                        content='Básico'
+                        link='https://graphql.org/learn/'
+                        used
                     />
                 </BoxContainer>
             </div>

@@ -108,3 +108,31 @@ a.und{
 .markdown p{
   @apply py-2
 }
+
+/* .used::after {
+  content: "usado";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip 
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}*/
+[data-title]:hover:after {
+    
+    @apply delay-[400ms] visible ;
+}
+/* box for title text */
+[data-title]:after {
+    /*some styles*/
+    @apply dark:bg-zinc-100 bg-zinc-800 dark:text-zinc-800 text-zinc-100 rounded-md shadow-xl px-2 py-1 font-semibold text-[90%]
+    /*position*/
+    absolute top-[-2em] left-0 whitespace-nowrap z-50 
+    /*content*/
+    content-[attr(data-title)]
+    invisible;
+}
+[data-title] {
+    position: relative;
+}

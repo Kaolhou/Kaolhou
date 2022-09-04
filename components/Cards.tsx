@@ -1,6 +1,6 @@
 import { ReactElement } from "react-markdown/lib/react-markdown"
 import { useEffect } from "react"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import Aos from 'aos'
 
 interface boxProps{
@@ -8,9 +8,10 @@ interface boxProps{
 }
 interface itemBoxProps{
     link: string;
-    url:string;
+    url:string|StaticImageData;
     title: string;
-    content:string;
+    content:'Intermediário'|'Estudando'|'Avançado'|'Básico'|'Interessado';
+    used?:boolean|null;
 }
 
 function BoxContainer(props:boxProps){
@@ -30,9 +31,9 @@ function ItemConteiner(props:itemBoxProps){
     },[])
     return(
         <a href={props.link} target='_blank' rel='NOREFERRER' data-aos='fade-up' >
-            <div className="min-w-[10em] max-w-[10em] min-h-[208px] bg-[#333333] m-2 p-4 rounded-lg 
+            <div className={`min-w-[10em] max-w-[10em] min-h-[208px] bg-[#333333] m-2 p-4 rounded-lg 
     select-none shadow-[5px_7px_20px_0_rgba(0,0,0,.5)] hover:shadow-[0px_0px_10px_0_rgba(0,0,0,.5)] 
-    transition-shadow" >
+    transition-shadow `}  data-title={props.used?'Usado nesse site':undefined}>
                 <div className="imgBox">
                     <Image src={props.url} alt="aoba" className="person drag"/>
                 </div>
