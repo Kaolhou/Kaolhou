@@ -49,25 +49,14 @@ export const getStaticProps:GetStaticProps<GetSPPostQueryResponse> = async funct
     const { data,loading,error } = await client.query<GetPostQueryResponse>({
         query:GET_POST_QUERY
     })
-    if(error==undefined){
-        return{
-            props:{
-                posts:{
-                    data,loading,
-                    error:null
-                }
-            }
-        }
-    }else{
-        return{
-            props:{
-                posts:{
-                    data,loading,error
-                }
+    return{
+        props:{
+            posts:{
+                data,loading,
+                error: error==undefined?null:error
             }
         }
     }
-    
 }
 
 const Home: NextPage<GetSPPostQueryResponse> = (props:InferGetStaticPropsType<typeof getStaticProps>) => {
