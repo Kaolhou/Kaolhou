@@ -38,7 +38,11 @@ function ItemConteiner(props: itemBoxProps) {
         data-title={props.used ? "Usado nesse site" : undefined}
       >
         <div className="imgBox">
-          <Image src={props.url} alt="aoba" className="person drag" />
+          <Image
+            src={props.url}
+            alt="Profile Picture"
+            className="person drag"
+          />
         </div>
         <div className="card-content">
           <h2>{props.title}</h2>

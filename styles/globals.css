@@ -2,74 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@layer base{
+@layer base {
   @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+    font-family: "Roboto";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
   }
 }
-*{
-  font-family: 'Roboto';
+* {
+  font-family: "Roboto";
 }
-:root{
-  @apply bg-pallete-5 text-pallete-2 selection:bg-pallete-1
+:root {
+  @apply bg-pallete-5 text-pallete-2 selection:bg-pallete-1;
 }
-.home-conteiner, #about-container{
-  @apply px-0 sm:px-10 lg:px-32 mx-3
+.home-conteiner,
+#about-container {
+  @apply px-0 sm:px-10 lg:px-32 mx-3;
 }
-h1{
-  @apply text-4xl py-3 font-ubuntu
+h1 {
+  @apply text-4xl py-3 font-ubuntu;
 }
-a.und{
-  @apply underline underline-offset-2 hover:opacity-75 transition-opacity
+a.und {
+  @apply underline underline-offset-2 hover:opacity-75 transition-opacity;
 }
 @media screen and (max-width: 1215px) {
-  .content{
-      @apply justify-center;
+  .content {
+    @apply justify-center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .maintenance {
+    flex-direction: column !important;
   }
 }
 
 /*markdown configuration*/
-.markdown{
+.markdown {
   @apply m-auto w-[100%] sm:w-[calc(100%-15rem)] md:w-[calc(100%-30rem)] lg:w-[calc(100%-45rem)]
-  px-2 bg-pallete-3 rounded-md p-5
+  px-2 bg-pallete-3 rounded-md p-5;
 }
-.markdown h1{
+.markdown h1 {
   font-size: 3rem !important;
-  @apply px-2 py-2 font-bold
+  @apply px-2 py-2 font-bold;
 }
-.markdown h2{
+.markdown h2 {
   font-size: 2rem !important;
-  @apply px-3 py-2 font-semibold
+  @apply px-3 py-2 font-semibold;
 }
-.markdown h3{
+.markdown h3 {
   font-size: 1.5rem !important;
-  @apply px-3 py-2 font-semibold
+  @apply px-3 py-2 font-semibold;
 }
-.markdown h4{
+.markdown h4 {
   font-size: 1rem !important;
-  @apply px-3 py-2 font-semibold
+  @apply px-3 py-2 font-semibold;
 }
-.contains-task-list{
+.contains-task-list {
   flex-direction: column;
 }
-.task-list-item{
+.task-list-item {
   list-style-type: none !important;
   padding-inline-start: 0 !important;
 }
 
-.markdown blockquote{
+.markdown blockquote {
   @apply text-zinc-900 bg-pallete-2 pl-3 border-l-8 border-zinc-800 my-3 rounded-md p-2;
   color: #252525;
 }
-.markdown a{
-  @apply decoration-slice underline underline-offset-2 hover:text-pallete-1 transition-colors
+.markdown a {
+  @apply decoration-slice underline underline-offset-2 hover:text-pallete-1 transition-colors;
 }
 /* .markdown blockquote>p::marker{
   content: '';
 } */
-.markdown pre{
+.markdown pre {
   background-color: #252525;
   padding: 20px;
   border-radius: 15px;
@@ -77,36 +82,36 @@ a.und{
   overflow-x: auto;
 }
 
-.markdown li{
+.markdown li {
   list-style: none !important;
 }
-.markdown ul{
+.markdown ul {
   list-style-position: inside;
 }
-.markdown ul > li::before{
-  content: '🞄 ';
+.markdown ul > li::before {
+  content: "🞄 ";
 }
-.markdown p code{
+.markdown p code {
   @apply bg-pallete-4 px-[.35rem] py-1 rounded-md;
   display: inline;
 }
 
-.markdown ol{
+.markdown ol {
   counter-reset: li;
-  padding: .75rem 0;
+  padding: 0.75rem 0;
 }
-.markdown ol li{
+.markdown ol li {
   list-style: none;
 }
-.markdown ol > li::before{
+.markdown ol > li::before {
   counter-increment: li;
-  content: counter(li)"-) ";
+  content: counter(li) "-) ";
 }
-.markdown img{
-  @apply min-w-[15rem] max-w-sm m-auto
+.markdown img {
+  @apply min-w-[15rem] max-w-sm m-auto;
 }
-.markdown p{
-  @apply py-2
+.markdown p {
+  @apply py-2;
 }
 
 /* .used::after {
@@ -120,13 +125,12 @@ a.und{
   border-color: transparent transparent black transparent;
 }*/
 [data-title]:hover:after {
-    
-    @apply delay-[400ms] visible ;
+  @apply delay-[400ms] visible;
 }
 /* box for title text */
 [data-title]:after {
-    /*some styles*/
-    @apply dark:bg-zinc-100 bg-zinc-800 dark:text-zinc-800 text-zinc-100 rounded-md shadow-xl px-2 py-1 font-semibold text-[90%]
+  /*some styles*/
+  @apply dark:bg-zinc-100 bg-zinc-800 dark:text-zinc-800 text-zinc-100 rounded-md shadow-xl px-2 py-1 font-semibold text-[90%]
     /*position*/
     absolute top-[-2em] left-0 whitespace-nowrap z-50 
     /*content*/
@@ -134,5 +138,5 @@ a.und{
     invisible;
 }
 [data-title] {
-    position: relative;
+  position: relative;
 }

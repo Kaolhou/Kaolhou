@@ -6,6 +6,7 @@ import PostsLinks from "../../components/PostLinks";
 import client from "../../lib/apollo";
 import { gql } from "@apollo/client";
 import Head from "next/head";
+import { fetchPages } from "../../lib/notion";
 
 const GET_POST_QUERY = gql`
   query MyQuery {
@@ -19,6 +20,9 @@ const GET_POST_QUERY = gql`
 
 export const getStaticProps: GetStaticProps<GetSPPostQueryResponse> =
   async function () {
+    fetchPages().then((data) => {
+      console.log(data);
+    });
     const { data, loading, error } = await client.query<GetPostQueryResponse>({
       query: GET_POST_QUERY,
     });
