@@ -15,7 +15,7 @@
  <a href="https://github.com/Kaolhou?tab=repositories">
   <div align="center">
     <img height="180em" src="https://github-readme-stats-kaolhou.vercel.app/api?username=kaolhou&theme=dracula&show_icons=true&count_private=true"/>
-    <img height="180em" src="https://github-readme-stats-kaolhou.vercel.app/api/top-langs/?username=kaolhou&hide_progress=false&layout=compact&theme=dracula&count_private=false"/>
+    <img height="180em" src="https://github-readme-stats-kaolhou.vercel.app/api/top-langs/?username=kaolhou&hide_progress=false&layout=compact&theme=dracula&count_private=false&hide=html"/>
   </div>
 </a>
     
