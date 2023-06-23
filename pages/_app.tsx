@@ -8,7 +8,7 @@ import { Footer } from "../components/Footer";
 import { ApolloProvider } from "@apollo/client";
 import lib from "../lib/apollo";
 import { Header } from "../components/Header";
-import { UnderMaintenance } from "../components/UnderMaintenance";
+//import { UnderMaintenance } from "../components/UnderMaintenance";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -23,13 +23,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div>
         <Header />
         <ApolloProvider client={lib}>
-          {/* <NavBar>
+          <NavBar>
             <Item icon="Home" path="/" />
             <Item icon="Posts" path="/posts" />
             <Item icon="Sobre" path="/about" />
           </NavBar>
-          <Component {...pageProps} /> */}
-          <UnderMaintenance />
+          <Component {...pageProps} />
+          {/*<UnderMaintenance />*/}
           <Footer />
         </ApolloProvider>
       </div>
