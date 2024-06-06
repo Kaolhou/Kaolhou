@@ -33,12 +33,7 @@ export default function ContentMain() {
               className="rounded-lg overflow-hidden "
               asChild
             >
-              <Image
-                src="https://www.kaolhou.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fandre.b66de0e7.jpg&w=640&q=75"
-                width={500}
-                height={500}
-                alt="pfp"
-              />
+              <Image src="/pfp1.jpg" width={500} height={500} alt="pfp" />
             </AspectRatio>
           </HoverCardTrigger>
           <GitHubCard />
