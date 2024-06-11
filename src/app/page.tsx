@@ -1,11 +1,11 @@
-import ContentMain from "@/components/main/content";
-import Navigation from "@/components/main/navigation";
+import ContentMain from "./_main_page/content";
+import Technologies from "./_main_page/technologies";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden min-h-screen">
-      <Navigation />
+    <div className="flex flex-col gap-5 justify-end">
       <ContentMain />
-    </main>
+      <Technologies />
+    </div>
   );
 }

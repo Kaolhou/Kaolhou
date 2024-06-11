@@ -10,7 +10,7 @@ const Info: React.FC<{ children: React.ReactNode; info: React.ReactNode }> =
     return (
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger>{children}</TooltipTrigger>
+          <TooltipTrigger className="cursor-help">{children}</TooltipTrigger>
           <TooltipContent>
             <p>{info}</p>
           </TooltipContent>

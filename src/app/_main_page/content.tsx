@@ -1,12 +1,13 @@
 import Image from "next/image";
-import { AspectRatio } from "../ui/aspect-ratio";
-import Info from "./info";
-import { HoverCard, HoverCardTrigger } from "../ui/hover-card";
-import GitHubCard from "./github-card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import Info from "@/components/main/info";
+import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
+import GitHubCard from "@/components/main/github-card";
+import Container from "@/components/main/container";
 
 export default function ContentMain() {
   return (
-    <div className="flex max-w-[50rem] mx-auto gap-5 flex-wrap md:flex-nowrap mt-4 items-center justify-center p-2 ">
+    <Container className="flex max-w-[50rem] mx-auto gap-5 flex-wrap md:flex-nowrap mt-4 items-center justify-center p-2 ">
       <div className="basis-[100%]">
         <div className="my-2">
           <span className="text-sm ">Olá eu sou</span>
@@ -39,6 +40,6 @@ export default function ContentMain() {
           <GitHubCard />
         </HoverCard>
       </div>
-    </div>
+    </Container>
   );
 }
