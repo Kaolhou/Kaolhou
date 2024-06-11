@@ -1,10 +1,48 @@
 "use client";
 import Container from "@/components/main/container";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import capitalize from "@/lib/utils";
 import { TabsContent } from "@radix-ui/react-tabs";
 type TypeLang = "backend" | "frontend" | "database";
 type Data = {
   [key in TypeLang]: string[];
+};
+type SingleTech = {
+  [key: string]: {
+    title?: string;
+    isUsed?: boolean;
+    level: "estudando" | "básico" | "intermediário" | "avançado";
+    //logo: string
+  };
+};
+const singleTech: SingleTech = {
+  javascript: {
+    level: "intermediário",
+    isUsed: true,
+  },
+  css: {
+    level: "avançado",
+    isUsed: true,
+    title: "CSS",
+  },
+  html: {
+    level: "avançado",
+    isUsed: true,
+    title: "HTML",
+  },
+  next: {
+    title: "Next.js",
+    level: "básico",
+    isUsed: true,
+  },
+  java: {
+    level: "intermediário",
+  },
+  sql: {
+    title: "MySQL",
+    level: "intermediário",
+  },
 };
 export default function Technologies() {
   const tech: Data = {
@@ -26,14 +64,13 @@ export default function Technologies() {
         </TabsList>
         <div className="flex-1">
           {Object.keys(tech).map((i, key) => (
-            <TabsContent value={i} key={key}>
-              {
-                <ul>
-                  {tech[i as keyof Data].map((i, key) => (
-                    <li key={key}>{i}</li>
-                  ))}
-                </ul>
-              }
+            <TabsContent value={i} key={key} className="flex gap-2">
+              {tech[i as keyof Data].map((i, key) => (
+                <Card key={key} className="basis-[33%] p-3">
+                  <CardTitle>{singleTech[i].title ?? capitalize(i)}</CardTitle>
+                  <CardContent>teste</CardContent>
+                </Card>
+              ))}
             </TabsContent>
           ))}
         </div>
