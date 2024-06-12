@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        ssm: "520px",
+      },
       colors: {
         border: "var(--border)",
         input: "var(--input)",

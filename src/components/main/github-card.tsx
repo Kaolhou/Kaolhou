@@ -53,21 +53,39 @@ async function Card() {
         </Avatar>
         <div className="space-y-1">
           <h4 className="text-sm font-semibold">
-            <Link href={result.html_url} target="_blank">
-              @Kaolhou
-            </Link>
+            {result.html_url ? (
+              <Link href={result.html_url} target="_blank">
+                @Kaolhou
+              </Link>
+            ) : (
+              <span>@Kaolhou</span>
+            )}
           </h4>
-          <p className="text-sm">{result.bio}</p>
+          <p className="text-sm">
+            {result.bio ?? (
+              <span className="flex flex-col gap-1">
+                <Skeleton className="h-3 w-60 rounded-full" />
+                <Skeleton className="h-3 w-60 rounded-full" />
+                <Skeleton className="h-3 w-48 rounded-full" />
+              </span>
+            )}
+          </p>
           <div className="flex items-center pt-2">
             <MapPin className="mr-2 h-4 w-4 opacity-70" />{" "}
             <span className="text-xs text-muted-foreground">
-              {result.location}
+              {result.location ?? (
+                <Skeleton className="h-3 w-28 rounded-full" />
+              )}
             </span>
           </div>
           <div className="flex items-center pt-2">
             <CalendarDays className="mr-2 h-4 w-4 opacity-70" />{" "}
             <span className="text-xs text-muted-foreground">
-              Joined {time_ago(new Date(result.created_at))}
+              {result.created_at ? (
+                `Joined ${time_ago(new Date(result.created_at))}`
+              ) : (
+                <Skeleton className="h-3 w-28 rounded-full" />
+              )}
             </span>
           </div>
         </div>
