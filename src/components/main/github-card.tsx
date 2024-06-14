@@ -1,8 +1,9 @@
+"use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { HoverCardContent } from "@/components/ui/hover-card";
 import { time_ago } from "@/lib/utils";
 import { CalendarDays, MapPin } from "lucide-react";
-import { Suspense } from "react";
+import { useEffect, useState } from "react";
 import { Skeleton } from "../ui/skeleton";
 import Link from "next/link";
 
@@ -41,28 +42,43 @@ interface Data {
   updated_at: string;
 }
 
-async function Card() {
+async function fetchData(): Promise<Data> {
   const data = await fetch("https://api.github.com/users/Kaolhou");
-  const result = (await data.json()) as Data;
+  return data.json();
+}
+export function GitHubCard() {
+  const [data, setData] = useState<Data | null>();
+
+  useEffect(() => {
+    fetchData().then((result) => {
+      setData(result);
+    });
+  }, []);
+
   return (
     <HoverCardContent className="w-80">
       <div className="flex justify-between space-x-4">
-        <Avatar>
-          <AvatarImage src="https://github.com/kaolhou.png" />
-          <AvatarFallback>Kaolhou</AvatarFallback>
-        </Avatar>
+        {!data ? (
+          <Skeleton className="w-16 h-16 rounded-full" />
+        ) : (
+          <Avatar>
+            <AvatarImage src={data.avatar_url} />
+            <AvatarFallback>{data.login}</AvatarFallback>
+          </Avatar>
+        )}
+
         <div className="space-y-1">
           <h4 className="text-sm font-semibold">
-            {result.html_url ? (
-              <Link href={result.html_url} target="_blank">
-                @Kaolhou
+            {data?.html_url ? (
+              <Link href={data.html_url} target="_blank">
+                @{data.login}
               </Link>
             ) : (
               <span>@Kaolhou</span>
             )}
           </h4>
           <p className="text-sm">
-            {result.bio ?? (
+            {data?.bio ?? (
               <span className="flex flex-col gap-1">
                 <Skeleton className="h-3 w-60 rounded-full" />
                 <Skeleton className="h-3 w-60 rounded-full" />
@@ -73,16 +89,14 @@ async function Card() {
           <div className="flex items-center pt-2">
             <MapPin className="mr-2 h-4 w-4 opacity-70" />{" "}
             <span className="text-xs text-muted-foreground">
-              {result.location ?? (
-                <Skeleton className="h-3 w-28 rounded-full" />
-              )}
+              {data?.location ?? <Skeleton className="h-3 w-28 rounded-full" />}
             </span>
           </div>
           <div className="flex items-center pt-2">
             <CalendarDays className="mr-2 h-4 w-4 opacity-70" />{" "}
             <span className="text-xs text-muted-foreground">
-              {result.created_at ? (
-                `Joined ${time_ago(new Date(result.created_at))}`
+              {data?.created_at ? (
+                `Joined ${time_ago(new Date(data.created_at))}`
               ) : (
                 <Skeleton className="h-3 w-28 rounded-full" />
               )}
@@ -91,25 +105,5 @@ async function Card() {
         </div>
       </div>
     </HoverCardContent>
-  );
-}
-
-function GitHubCardLoading() {
-  return (
-    <div className="flex items-center space-x-4">
-      <Skeleton className="h-12 w-12 rounded-full" />
-      <div className="space-y-2">
-        <Skeleton className="h-4 w-[250px]" />
-        <Skeleton className="h-4 w-[200px]" />
-      </div>
-    </div>
-  );
-}
-
-export default function GitHubCard() {
-  return (
-    <Suspense fallback={<GitHubCardLoading />}>
-      <Card />
-    </Suspense>
   );
 }

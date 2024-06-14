@@ -10,7 +10,6 @@ export default function capitalize(str: string) {
 }
 
 export function time_ago(time: string | number | Date): string | number {
-  console.log(time, typeof time);
   switch (typeof time) {
     case "number":
       break;

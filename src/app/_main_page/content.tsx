@@ -2,7 +2,7 @@ import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Info from "@/components/main/info";
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
-import GitHubCard from "@/components/main/github-card";
+import { GitHubCard } from "@/components/main/github-card";
 import Container from "@/components/main/container";
 
 export default function ContentMain() {

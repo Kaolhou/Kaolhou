@@ -1,5 +1,5 @@
 import React from "react";
-import { SiJavascript } from "react-icons/si";
+import { SiJavascript, SiCss3 } from "react-icons/si";
 export type SingleTechData = {
   title?: string;
   isUsed?: boolean;
@@ -25,7 +25,7 @@ export const singleTech: SingleTech = {
     level: "avançado",
     isUsed: true,
     title: "CSS",
-    logo: <SiJavascript size={"100%"} />,
+    logo: <SiCss3 size={"100%"} color="#1E3FDA" />,
   },
   html: {
     level: "avançado",
