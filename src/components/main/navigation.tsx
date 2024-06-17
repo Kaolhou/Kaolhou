@@ -11,8 +11,8 @@ import ToggleTheme from "./toggle-theme";
 export default function Navigation() {
   return (
     <NavigationMenu>
-      <NavigationMenuList className="justify-between flex w-screen mt-1 md:px-20">
-        <div className="w-[52px] md:w-[100px]"></div>
+      <NavigationMenuList className="justify-between flex w-screen mt-1 sm:px-20">
+        <div className="w-[52px] sm:w-[100px]"></div>
         <div className="flex justify-center">
           <NavigationMenuItem>
             <NavigationMenuLink

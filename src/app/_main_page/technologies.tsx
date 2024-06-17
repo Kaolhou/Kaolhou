@@ -13,16 +13,30 @@ import {
 
 function TechCard({ i, title }: SingleTechData & { i: string }) {
   return (
-    <Card className="p-3">
+    <Card className="p-3 h-full">
       <CardTitle>{title ?? capitalize(i)}</CardTitle>
-      <CardContent className="mt-2">{singleTech[i].logo}</CardContent>
+      <CardContent className="mt-2 flex flex-col mx-auto justify-center">
+        {{
+          ...singleTech[i].logo,
+          props: { ...singleTech[i].logo.props, size: "100%" },
+        }}
+      </CardContent>
     </Card>
   );
 }
 export default function Technologies() {
   const tech: Data = {
-    frontend: ["javascript", "css", "css", "css"],
-    backend: ["next", "java"],
+    frontend: [
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "react",
+      "next",
+      "tailwind",
+      "flutter",
+    ],
+    backend: ["javascript", "typescript", "next", "java", "python"],
     database: ["sql"],
   };
 
@@ -39,20 +53,21 @@ export default function Technologies() {
         </TabsList>
         <div className="flex-1">
           {Object.keys(tech).map((i, key) => (
-            <TabsContent value={i} key={key} className="flex gap-2 flex-wrap">
+            <TabsContent
+              value={i}
+              key={key}
+              className="md:grid-cols-3 ssm:grid-cols-2 grid-cols-1	grid gap-3 auto-rows-[1fr]"
+            >
               {tech[i as keyof Data].map((i, key) =>
                 Boolean(singleTech[i].isUsed) ? (
                   <HoverCard key={key}>
-                    <HoverCardTrigger className="basis-[100%] ssm:basis-[48%] sm:basis-[48%] md:basis-[48%] lg:basis-[30%]">
+                    <HoverCardTrigger className="">
                       <TechCard {...singleTech[i]} i={i} />
                     </HoverCardTrigger>
-                    <HoverCardContent>usado nesse site</HoverCardContent>
+                    <HoverCardContent>Usado nesse site</HoverCardContent>
                   </HoverCard>
                 ) : (
-                  <div
-                    key={key}
-                    className="basis-[100%] sm:basis-[48%] md:basis-[48%] lg:basis-[30%]"
-                  >
+                  <div key={key}>
                     <TechCard {...singleTech[i]} i={i} />
                   </div>
                 )

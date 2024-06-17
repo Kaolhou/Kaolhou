@@ -11,12 +11,12 @@ export default function ToggleTheme() {
     setIsClient(true);
   }, []);
   const Component = (
-    <span className="flex justify-center items-center gap-1 pr-3 md:pr-0 cursor-pointer">
+    <span className="flex justify-center items-center gap-1 pr-3 sm:pr-0 cursor-pointer">
       <label
         htmlFor="toggle-theme"
         className="flex justify-center items-center cursor-pointer"
       >
-        <span className="hidden md:inline-block">
+        <span className="hidden sm:inline-block">
           <SunIcon />
         </span>
       </label>
@@ -30,7 +30,7 @@ export default function ToggleTheme() {
         htmlFor="toggle-theme"
         className="flex justify-center items-center cursor-pointer"
       >
-        <span className="hidden md:inline-block">
+        <span className="hidden sm:inline-block">
           <MoonIcon />
         </span>
       </label>
@@ -38,12 +38,12 @@ export default function ToggleTheme() {
   );
   if (!isClient) {
     return (
-      <span className="flex justify-center items-center gap-1 pr-3 md:pr-0">
+      <span className="flex justify-center items-center gap-1 pr-3 sm:pr-0">
         <label
           htmlFor="toggle-theme"
           className="flex justify-center items-center"
         >
-          <span className="hidden md:inline-block">
+          <span className="hidden sm:inline-block">
             <SunIcon />
           </span>
         </label>
@@ -52,7 +52,7 @@ export default function ToggleTheme() {
           htmlFor="toggle-theme"
           className="flex justify-center items-center"
         >
-          <span className="hidden md:inline-block">
+          <span className="hidden sm:inline-block">
             <MoonIcon />
           </span>
         </label>
