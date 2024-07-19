@@ -1,17 +1,20 @@
 import React from "react";
 import {
   SiJavascript,
-  SiCss3,
-  SiHtml5,
   SiTypescript,
   SiPython,
   SiReact,
   SiTailwindcss,
   SiFlutter,
 } from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
 import { DiJava } from "react-icons/di";
-import { useTheme } from "next-themes";
+import NextLogo from "../_svgs/next";
+import { Html } from "../_svgs/html";
+import Css from "../_svgs/css";
+import Flutter from "../_svgs/flutter";
+import Java from "../_svgs/java";
+import Python from "../_svgs/python";
+import Typescript from "../_svgs/typescript";
 
 export type SingleTechData = {
   title?: string;
@@ -28,25 +31,18 @@ export type Data = {
   [key in TypeLang]: string[];
 };
 
-function NextLogo({ ...props }) {
-  const { theme } = useTheme();
-  return (
-    <RiNextjsFill color={theme == "dark" ? "white" : "black"} {...props} />
-  );
-}
-
 export const singleTech: SingleTech = {
   html: {
     level: "avançado",
     isUsed: true,
     title: "HTML",
-    logo: <SiHtml5 color="#E5532C" />,
+    logo: <Html />,
   },
   css: {
     level: "avançado",
     isUsed: true,
     title: "CSS",
-    logo: <SiCss3 color="#1E3FDA" />,
+    logo: <Css />,
   },
   javascript: {
     level: "intermediário",
@@ -55,7 +51,7 @@ export const singleTech: SingleTech = {
   },
   typescript: {
     level: "intermediário",
-    logo: <SiTypescript color="#2F74C0" />,
+    logo: <Typescript />,
     isUsed: true,
   },
 
@@ -67,7 +63,7 @@ export const singleTech: SingleTech = {
   },
   java: {
     level: "intermediário",
-    logo: <DiJava color="#DF121E" className="p-0" />,
+    logo: <Java />,
   },
   sql: {
     title: "MySQL",
@@ -76,7 +72,7 @@ export const singleTech: SingleTech = {
   },
   python: {
     level: "intermediário",
-    logo: <SiPython color="#4074A6" />,
+    logo: <Python />,
   },
   react: {
     level: "intermediário",
@@ -90,6 +86,6 @@ export const singleTech: SingleTech = {
   },
   flutter: {
     level: "estudando",
-    logo: <SiFlutter color="#0E5FA0" />,
+    logo: <Flutter />,
   },
 };
